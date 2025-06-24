@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Background Shapes -->
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+
+    <header>
+        <nav>
+            <div class="logo">
+                < Eren Eray />
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-toggle">
+                <i class="fas fa-sun"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <h1>Hi all 👋 I'm Eren</h1>
+                <p class="description">
+                    A passionate Full Stack Software Developer 🚀 having an
+                    experience of building Web and Mobile applications with
+                    JavaScript / Reactjs / Nodejs / React Native and some
+                    other cool libraries and frameworks.
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-icon github"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-icon google"><i class="fab fa-google"></i></a>
+                </div>
+                <div class="cta-buttons">
+                    <button class="contact-me">CONTACT ME</button>
+                    <button class="see-resume">SEE MY RESUME</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/anime_pp_upwork.jpg" alt="Profile Image">
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <i class="fas fa-code skill-icon"></i>
+                    <h3 class="skill-title">Frontend Development</h3>
+                    <p class="skill-description">Experience with React.js, HTML5, CSS3, JavaScript, and modern frontend frameworks.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-server skill-icon"></i>
+                    <h3 class="skill-title">Backend Development</h3>
+                    <p class="skill-description">Proficient in Node.js, Express.js, and database management systems.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-mobile-alt skill-icon"></i>
+                    <h3 class="skill-title">Mobile Development</h3>
+                    <p class="skill-description">Building cross-platform mobile applications using React Native.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/400x200" alt="Project 1" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">Project One</h3>
+                        <p class="project-description">A full-stack web application built with React.js and Node.js.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">View More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/400x200" alt="Project 2" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">Project Two</h3>
+                        <p class="project-description">Mobile application developed using React Native.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">View More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/400x200" alt="Project 3" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">Project Three</h3>
+                        <p class="project-description">Backend API built with Node.js and Express.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">View More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-container">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" id="name" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" class="form-textarea" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>İletişim</h3>
+                <p><i class="fas fa-envelope"></i> erenerayyilmaz745@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +90 552 601 16 74</p>
+                <p><i class="fas fa-map-marker-alt"></i> Eskişehir, Türkiye</p>
+            </div>
+            <div class="footer-section">
+                <h3>Sosyal Medya</h3>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Tüm Hakları Saklıdır. | <a href="#">Gizlilik Politikası</a> | <a href="#">Kullanım Şartları</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
