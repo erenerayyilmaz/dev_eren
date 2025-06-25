@@ -7,7 +7,8 @@
 }
 
 body {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+    background-size: cover;
     color: #333;
     position: relative;
     overflow-x: hidden;
@@ -16,14 +17,15 @@ body {
 body::before {
     content: '';
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-        radial-gradient(circle at 15% 50%, rgba(76, 175, 80, 0.08) 0%, transparent 25%),
-        radial-gradient(circle at 85% 30%, rgba(0, 191, 165, 0.08) 0%, transparent 25%);
-    z-index: -1;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(255,255,255,0.7); /* light overlay for readability */
+    z-index: 0;
+    pointer-events: none;
+    transition: background 0.8s cubic-bezier(0.4,0,0.2,1);
+}
+
+body.dark-mode::before {
+    background: rgba(10, 25, 41, 0.85); /* dark overlay for readability */
 }
 
 header {
@@ -355,6 +357,14 @@ button {
     margin-bottom: 3rem;
     text-align: center;
     position: relative;
+    background: linear-gradient(90deg, #4CAF50 30%, #00bfa5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+    text-shadow: 0 2px 8px rgba(76, 175, 80, 0.15);
+    letter-spacing: 1px;
+    transition: text-shadow 0.4s cubic-bezier(0.4,0,0.2,1);
 }
 
 .section-title::after {
@@ -367,6 +377,10 @@ button {
     height: 4px;
     background-color: #6c63ff;
     border-radius: 2px;
+}
+
+.section-title:hover {
+    text-shadow: 0 4px 16px rgba(76, 175, 80, 0.25);
 }
 
 /* Skills Section */
@@ -671,8 +685,9 @@ html {
 
 /* Dark mode styles */
 body.dark-mode {
-    background: #0a1929;
-    color: #ffffff;
+    background: url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
     transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1044,4 +1059,20 @@ body.dark-mode .footer-bottom a:hover {
     .footer-section .social-links {
         justify-content: center;
     }
+}
+
+/* Responsive overlay fix */
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+    }
+}
+
+/* Button and link hover enhancements */
+button, .footer-bottom a, .footer-section ul li a, .social-icon {
+    transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+button:hover, .footer-bottom a:hover, .footer-section ul li a:hover, .social-icon:hover {
+    transform: scale(1.07);
+    box-shadow: 0 4px 16px rgba(76, 175, 80, 0.15);
 }
